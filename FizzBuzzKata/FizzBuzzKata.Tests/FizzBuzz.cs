@@ -6,7 +6,7 @@ namespace FizzBuzzKata.Tests
     {
         internal static string GetFizzBuzzStatus(int v)
         {
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }

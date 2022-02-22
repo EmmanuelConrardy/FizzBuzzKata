@@ -14,5 +14,15 @@ namespace FizzBuzzKata.Tests
             
             Assert.AreEqual("Fizz", result);
         }
+
+        [Test]
+        public void Should_Return_Nothing_For_7()
+        {
+            uint number = 7;
+
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
+
+            Assert.IsTrue(string.IsNullOrEmpty(result));
+        }
     }
 }

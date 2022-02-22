@@ -12,18 +12,10 @@
             {
                 return "Buzz";
             }
-            else if (number == 7)
+            else if (!IsDivisibleBy3(number))
             {
-                return "7";
-            }
-            else if (number == 2)
-            {
-                return "2";
-            }
-            else if (number == 13)
-            {
-                return "13";
-            }
+                return number.ToString();
+            }            
             return "Fizz";
         }
 

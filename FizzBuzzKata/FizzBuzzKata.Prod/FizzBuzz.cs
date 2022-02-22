@@ -2,21 +2,35 @@
 {
     public class FizzBuzz
     {
-        public static string GetFizzBuzzStatus(uint number)
+        public static string GetFizzBuzzMessage(uint number)
+        {
+            FizzBuzzStatus status = GetFizzBuzzStatus(number);
+
+            if (status == FizzBuzzStatus.NoStatus)
+            {
+                return number.ToString();
+            }
+            else
+            {
+                return status.ToString();
+            }
+        }
+
+        public static FizzBuzzStatus GetFizzBuzzStatus(uint number)
         {
             if (IsDivisibleBy3(number) && IsDivisibleBy5(number))
             {
-                return "FizzBuzz";
+                return FizzBuzzStatus.FizzBuzz;
             }
             else if (IsDivisibleBy5(number))
             {
-                return "Buzz";
+                return FizzBuzzStatus.Buzz;
             }
             else if (!IsDivisibleBy3(number))
             {
-                return number.ToString();
+                return FizzBuzzStatus.NoStatus;
             }            
-            return "Fizz";
+            return FizzBuzzStatus.Fizz;
         }
 
         private static bool IsDivisibleBy3(uint number)

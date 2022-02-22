@@ -4,7 +4,7 @@
     {
         public static string GetFizzBuzzStatus(uint number)
         {
-            if (number == 10 || number == 25)
+            if (IsDivisibleBy5(number))
             {
                 return "Buzz";
             }
@@ -18,6 +18,11 @@
         private static bool IsDivisibleBy3(uint number)
         {
             return number % 3 == 0;
+        }
+
+        private static bool IsDivisibleBy5(uint number)
+        {
+            return number % 5 == 0;
         }
     }
 }

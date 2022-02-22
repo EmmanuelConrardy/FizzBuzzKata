@@ -14,7 +14,7 @@
             }
             else if (!IsDivisibleBy3(number))
             {
-                return string.Empty;
+                return "7";
             }            
             return "Fizz";
         }

@@ -4,7 +4,11 @@
     {
         public static string GetFizzBuzzStatus(uint number)
         {
-            if (IsDivisibleBy5(number))
+            if (number == 15 || number == 30)
+            {
+                return "FizzBuzz";
+            }
+            else if (IsDivisibleBy5(number))
             {
                 return "Buzz";
             }

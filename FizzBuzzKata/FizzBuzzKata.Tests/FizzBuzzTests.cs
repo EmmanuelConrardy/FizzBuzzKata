@@ -64,5 +64,25 @@ namespace FizzBuzzKata.Tests
 
             Assert.AreEqual("Buzz", result);
         }
+
+        [Test]
+        public void Should_Return_FizzBuzz_For_15()
+        {
+            uint number = 15;
+
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
+
+            Assert.AreEqual("FizzBuzz", result);
+        }
+
+        [Test]
+        public void Should_Return_FizzBuzz_For_30()
+        {
+            uint number = 30;
+
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
+
+            Assert.AreEqual("FizzBuzz", result);
+        }
     }
 }

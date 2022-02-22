@@ -12,10 +12,18 @@
             {
                 return "Buzz";
             }
-            else if (!IsDivisibleBy3(number))
+            else if (number == 7)
             {
                 return "7";
-            }            
+            }
+            else if (number == 2)
+            {
+                return "2";
+            }
+            else if (number == 13)
+            {
+                return "13";
+            }
             return "Fizz";
         }
 

@@ -4,7 +4,7 @@
     {
         public static string GetFizzBuzzStatus(uint number)
         {
-            if (number == 7|| number == 2)
+            if (number == 7 || number == 2 || number == 13)
             {
                 return string.Empty;
             }

@@ -34,5 +34,15 @@ namespace FizzBuzzKata.Tests
 
             Assert.IsTrue(string.IsNullOrEmpty(result));
         }
+
+        [Test]
+        public void Should_Return_Nothing_For_13()
+        {
+            uint number = 13;
+
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
+
+            Assert.IsTrue(string.IsNullOrEmpty(result));
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 9;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
             
             Assert.AreEqual("Fizz", result);
         }
@@ -20,7 +20,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 7;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
 
             Assert.AreEqual("7", result);
         }
@@ -30,7 +30,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 2;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
 
             Assert.AreEqual("2", result);
         }
@@ -40,7 +40,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 13;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
 
             Assert.AreEqual("13", result);
         }
@@ -50,7 +50,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 10;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
 
             Assert.AreEqual("Buzz", result);
         }
@@ -60,7 +60,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 25;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
 
             Assert.AreEqual("Buzz", result);
         }
@@ -70,7 +70,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 15;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
 
             Assert.AreEqual("FizzBuzz", result);
         }
@@ -80,7 +80,7 @@ namespace FizzBuzzKata.Tests
         {
             uint number = 30;
 
-            string result = FizzBuzz.GetFizzBuzzMessage(number);
+            string result = FizzBuzz.GetFizzBuzzStatus(number);
 
             Assert.AreEqual("FizzBuzz", result);
         }

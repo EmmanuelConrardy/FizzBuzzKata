@@ -1,0 +1,54 @@
+﻿@page "/fizzbuzz"
+
+@using FizzBuzzKata.Server.Data
+@inject FizzBuzzService FizzBuzzService
+
+<h1>FizzBuzz</h1>
+
+@if (resultats == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <input DisplayName="Number" @bind="Number" />
+     <button class="btn btn-primary" @onclick="ProcessFizzBuzz">Submit</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Resulat</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var resultat in resultats)
+            {
+                <tr>
+                    <td>@resultat</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public uint Number
+    {
+        get { return number; }
+        set { number = value; }
+    }
+
+    private uint number = 100;
+    private string[] resultats;
+
+    protected override async Task OnInitializedAsync()
+    {
+        resultats = await FizzBuzzService.GetFizzBuzzAsync(number);
+    }
+
+    private async Task ProcessFizzBuzz()
+    {
+        resultats = await FizzBuzzService.GetFizzBuzzAsync(number);
+    }
+}

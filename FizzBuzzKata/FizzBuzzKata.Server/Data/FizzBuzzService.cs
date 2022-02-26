@@ -9,7 +9,7 @@ namespace FizzBuzzKata.Server.Data
         {
             var result = new string[number];
 
-            for (uint i = 0; i < number; i++)
+            for (uint i = 1; i < number; i++)
             {
                 result[i] = FizzBuzz.GetFizzBuzz(i);
             }

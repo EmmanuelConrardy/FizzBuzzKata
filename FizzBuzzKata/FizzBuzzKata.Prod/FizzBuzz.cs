@@ -2,27 +2,24 @@
 {
     public class FizzBuzz
     {
+        private const string Fizz = "Fizz";
+        private const string Buzz = "Buzz";
+
         public static string GetFizzBuzz(uint number)
         {
-            bool isDivisibleBy3 = number % 3 == 0;
-            bool isDivisibleBy5 = number % 5 == 0;
-            bool isDivisibleBy3And5 = number % 15 == 0;
+            var moduloFizzBuzz = new Dictionary<int, string>();
+            moduloFizzBuzz.Add(15, Fizz+Buzz);
+            moduloFizzBuzz.Add(5, Buzz);
+            moduloFizzBuzz.Add(3, Fizz);
 
-            if (isDivisibleBy3And5)
+            foreach (var modulo in moduloFizzBuzz.Keys)
             {
-                return "FizzBuzz";
-            }
+                if(number % modulo == 0)
+                {
+                    return moduloFizzBuzz[modulo];
+                }
+            }; 
 
-            if (isDivisibleBy5)
-            {
-                return "Buzz";
-            }
-
-            if (isDivisibleBy3)
-            {
-                return "Fizz";
-            }          
-            
             return number.ToString();
         }       
     }

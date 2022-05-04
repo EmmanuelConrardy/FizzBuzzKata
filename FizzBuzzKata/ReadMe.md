@@ -1,0 +1,3 @@
+- refacto if
+- module de cache
+- web (authente, sécurite, middleware, async sync, httpclienfacory, attribut filtre,)

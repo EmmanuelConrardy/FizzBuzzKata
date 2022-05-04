@@ -26,6 +26,17 @@ namespace FizzBuzzKata.Tests
             Assert.AreEqual("Buzz", result);
         }
 
+
+        [Test]
+        public void Should_Return_Buzz_For_7()
+        {
+            uint number = 7;
+
+            string result = FizzBuzz.GetFizzBuzz(number);
+
+            Assert.AreEqual("Bazz", result);
+        }
+
         [Test]
         public void Should_Return_FizzBuzz_For_15()
         {
@@ -37,13 +48,13 @@ namespace FizzBuzzKata.Tests
         }
 
         [Test]
-        public void Should_Return_SameNumber_For_7()
+        public void Should_Return_SameNumber_For_8()
         {
-            uint number = 7;
+            uint number = 8;
 
             string result = FizzBuzz.GetFizzBuzz(number);
 
-            Assert.AreEqual("7", result);
+            Assert.AreEqual("8", result);
         }
 
         //confirmation examples
@@ -55,6 +66,26 @@ namespace FizzBuzzKata.Tests
             string result = FizzBuzz.GetFizzBuzz(number);
 
             Assert.AreEqual("Fizz", result);
+        }
+
+        [Test]
+        public void Should_Return_Buzz_For_21()
+        {
+            uint number = 21;
+
+            string result = FizzBuzz.GetFizzBuzz(number);
+
+            Assert.AreEqual("FizzBazz", result);
+        }
+
+        [Test]
+        public void Should_Return_Buzz_For_35()
+        {
+            uint number = 35;
+
+            string result = FizzBuzz.GetFizzBuzz(number);
+
+            Assert.AreEqual("BuzzBazz", result);
         }
 
         [Test]
